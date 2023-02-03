@@ -1,5 +1,5 @@
-from controller.action_comprar import ActionComprarController
-from controller.action_joalheria import ActionJoalheriaController
+from controller.products_allowed_products_controller import ActionComprarController
+from controller.products_controller import ActionJoalheriaController
 from controller.action_mostrar import ActionMostruarioController
 
 
@@ -19,7 +19,6 @@ class ActionViewJoalheria:
             },
             "success": True
         }
-
 
 
 class ActionViewComprar:

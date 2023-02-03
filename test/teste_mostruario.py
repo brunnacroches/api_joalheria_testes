@@ -1,17 +1,17 @@
-from src.controller import action_joalheria
+from controller import products_controller
 
 
 # Testes unitários
 def test_success():
     entrada = 10.0
-    response = action_joalheria(entrada)
+    response = products_controller(entrada)
 
     assert isinstance(response, str) == True
     assert response == "Anel"
 
 def test_success_2():
     entrada = 40.0
-    response = action_joalheria(entrada)
+    response = products_controller(entrada)
 
     assert isinstance(response, str) == True
     assert response == "Pulseira"
@@ -35,7 +35,7 @@ def test_entrada_not_float():
     entrada = "EntradaErrada"
 
     try:
-        action_joalheria(entrada)
+        products_controller(entrada)
         assert False
     except Exception as exception:
         assert str(exception) == "Entrada deve ser em float!"
@@ -44,7 +44,7 @@ def test_entrada_not_in_range():
     entrada = 12.0
 
     try:
-        action_joalheria(entrada)
+        products_controller(entrada)
         assert False
     except Exception as exception:
         assert str(exception) == "Entrada deve ser entre 1 - 20"
